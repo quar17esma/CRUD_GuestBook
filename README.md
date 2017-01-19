@@ -25,10 +25,10 @@ The Application accepts the name, surname, birthday date, phone number, e-mail, 
 To get the project you can simply use this HTTPS-link:  
 https://github.com/quar17esma/CRUD_GuestBook.git  
 
-Use Dump-file for MySQL:
+Use Dump-file for MySQL:  
 /other/DumpForMySQL/guest_book_db_guest_book.sql
 
-Set database properties in:
+Set database properties in:  
 /src/db.properties
 
 ## Disclaimer:
