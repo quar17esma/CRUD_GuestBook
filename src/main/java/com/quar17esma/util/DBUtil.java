@@ -12,8 +12,10 @@ public class DBUtil {
     private static Connection conn;
 
     public static Connection getConnection() {
-        if (conn != null)
+
+        if (conn != null) {
             return conn;
+        }
 
         InputStream inputStream = DBUtil.class.getClassLoader().getResourceAsStream("/db.properties");
         Properties properties = new Properties();
@@ -26,16 +28,11 @@ public class DBUtil {
             String user = properties.getProperty("user");
             String password = properties.getProperty("password");
 
-            System.out.println(driver+ " " + url+ " " + user + " " + password);
-
             Class.forName(driver);
 
             conn = DriverManager.getConnection(url, user, password);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
+
+        } catch (IOException | ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
 
