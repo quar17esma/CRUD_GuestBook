@@ -1,0 +1,10 @@
+{
+  "name": "Heroku Tomcat Guest Book",
+  "description": "Heroku Java Web Application Using Embedded Tomcat",
+  "repository": "https://github.com/quar17esma/Guest-Book",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Tomcat-logo.svg",
+  "keywords": [
+    "java",
+    "tomcat"
+  ]
+}

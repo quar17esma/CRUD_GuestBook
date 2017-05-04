@@ -3,7 +3,6 @@ package com.quar17esma.dao;
 
 import com.quar17esma.model.Guest;
 import com.quar17esma.util.DBUtil;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,11 +14,25 @@ public class GuestDAOImpl implements GuestDAO {
         conn = DBUtil.getConnection();
     }
 
-    @Override
     public void addGuest(Guest guest) {
-        try {
-            String query = "insert into guest_book (name, surname, birthday_date, phone_number, email, country, city)" +
+       
+        String query = "insert into guest_book (name, surname, birthday_date, phone_number, email, country, city)" +
                     " values (?,?,?,?,?,?,?)";
+
+        addOrUpdateExecute(query, guest);
+    }
+
+    public void updateGuest(Guest guest) {
+        
+            String query = "update guest_book " +
+                           "set name=?, surname=?, birthday_date=?, phone_number=?, email=?, country=?, city=? " +
+                           "where studentId=?";
+            
+            addOrUpdateExecute(query, guest);
+    }
+    
+    private void addOrUpdateExecute(String query, Guest guest){
+        try {
             PreparedStatement preparedStatement = conn.prepareStatement(query);
 
             preparedStatement.setString(1, guest.getFirstName());
@@ -38,7 +51,6 @@ public class GuestDAOImpl implements GuestDAO {
         }
     }
 
-    @Override
     public void deleteGuest(int guestId) {
         try {
             String query = "delete from guest_book where guest_id=?";
@@ -51,32 +63,6 @@ public class GuestDAOImpl implements GuestDAO {
         }
     }
 
-    @Override
-    public void updateGuest(Guest guest) {
-        try {
-            String query = "update guest_book " +
-                           "set name=?, surname=?, birthday_date=?, phone_number=?, email=?, country=?, city=? " +
-                           "where studentId=?";
-
-            PreparedStatement preparedStatement = conn.prepareStatement(query);
-
-            preparedStatement.setString(1, guest.getFirstName());
-            preparedStatement.setString(2, guest.getLastName());
-            preparedStatement.setString(3, guest.getBirthday());
-            preparedStatement.setString(4, guest.getPhoneNumber());
-            preparedStatement.setString(5, guest.getEmail());
-            preparedStatement.setString(6, guest.getCountry());
-            preparedStatement.setString(7, guest.getCity());
-
-            preparedStatement.executeUpdate();
-
-            preparedStatement.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
     public List<Guest> getAllGuests() {
         List<Guest> guests = new ArrayList<Guest>();
         try {
@@ -105,7 +91,6 @@ public class GuestDAOImpl implements GuestDAO {
         return guests;
     }
 
-    @Override
     public Guest getGuestById(int guestId) {
         Guest guest = new Guest();
         try {

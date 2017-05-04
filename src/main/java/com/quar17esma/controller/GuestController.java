@@ -18,7 +18,7 @@ import java.io.IOException;
 public class GuestController extends HttpServlet {
 
     private GuestDAO dao;
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 102831973239L;
     public static final String LIST_GUEST = "/listGuests.jsp";
     public static final String ADD_OR_EDIT = "/addGuest.jsp";
 

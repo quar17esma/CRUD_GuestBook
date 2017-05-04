@@ -1,8 +1,7 @@
 package com.quar17esma.util;
 
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -18,6 +17,7 @@ public class DBUtil {
 
         InputStream inputStream = DBUtil.class.getClassLoader().getResourceAsStream("/db.properties");
         Properties properties = new Properties();
+
         try {
             properties.load(inputStream);
 
@@ -25,6 +25,8 @@ public class DBUtil {
             String url = properties.getProperty("url");
             String user = properties.getProperty("user");
             String password = properties.getProperty("password");
+
+            System.out.println(driver+ " " + url+ " " + user + " " + password);
 
             Class.forName(driver);
 

@@ -1,36 +1,24 @@
-# CRUD_GuestBook
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+# Create a Java Web Application using Embedded Tomcat
 
-## Description:
+This tutorial will show you how to create a simple Java web application using embedded Tomcat.
 
-Web Application is a typical database Create, Retrieve, Update and Delete or CRUD using JSP and MySQL. 
-The Application accepts the name, surname, birthday date, phone number, e-mail, country and city of the person,
- previously check the form using HTML5, and adds information to the database, so it is just like an address book application.
- 
- ![Sample screen from this application](other/screenshot_1.jpg)
- 
- ![Sample screen from this application](other/screenshot_2.jpg)
+## Prerequisites
 
-## Technologies used:
+* Basic Java knowledge, including an installed version of the JVM and Maven.
+* Basic Git knowledge, including an installed version of Git.
+* A Java web application. If you don't have one follow the first step to create an example. Otherwise skip that step.
 
-- Java 8
-- HTML5
-- MVC design pattern using POJO, JSP and Servlet
-- JDBC API to access a database
-- [MySQL Community Server](https://dev.mysql.com/downloads/mysql/) as relational database management system
-- [Apache Tomcat](http://tomcat.apache.org/) as Java Servlet/JSP Container 
-- IDE used in project is [IntelliJ IDEA 15](https://www.jetbrains.com/idea/)
- 
-## Installation:
- 
-To get the project you can simply use this HTTPS-link:  
-https://github.com/quar17esma/CRUD_GuestBook.git  
+## Skip The Application Creation
 
-Use Dump-file for MySQL:  
-/other/DumpForMySQL/guest_book_db_guest_book.sql
+If you want to skip the creation steps you can clone the finished sample and then skip to the 'Deploy Your Application to Heroku' section:
 
-Set database properties in:  
-/src/db.properties
+```
+$ git clone git@github.com:heroku/devcenter-embedded-tomcat.git
+```
 
-## Disclaimer:
+## Follow the Guide
 
-This project is intended for non-commercial educational purposes.
+If you would like to create the application yourself, then follow the Dev Center guide on how to [Create a Java Web Application using Embedded Tomcat](https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat).
+
+
