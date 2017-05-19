@@ -24,7 +24,7 @@ The Application accepts the name, surname, birthday date, phone number, e-mail, 
 ## Installation:
  
 To get the project you can simply use this HTTPS-link:  
-https://github.com/quar17esma/Guest-Book.git 
+https://github.com/quar17esma/CRUD_GuestBook.git
 
 ## Disclaimer:
 
