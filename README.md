@@ -1,24 +1,31 @@
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-# Create a Java Web Application using Embedded Tomcat
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://ancient-ravine-66421.herokuapp.com/)
+# CRUD_GuestBook
 
-This tutorial will show you how to create a simple Java web application using embedded Tomcat.
+## Description:
 
-## Prerequisites
+Web Application is a typical database Create, Retrieve, Update and Delete or CRUD using JSP and MySQL. 
+The Application accepts the name, surname, birthday date, phone number, e-mail, country and city of the person,
+ previously check the form using HTML5, and adds information to the database, so it is just like an address book application.
+ 
+ ![Sample screen from this application](other/screenshot_1.jpg)
+ 
+ ![Sample screen from this application](other/screenshot_2.jpg)
 
-* Basic Java knowledge, including an installed version of the JVM and Maven.
-* Basic Git knowledge, including an installed version of Git.
-* A Java web application. If you don't have one follow the first step to create an example. Otherwise skip that step.
+## Technologies used:
 
-## Skip The Application Creation
+- Java 8
+- HTML5
+- MVC design pattern using POJO, JSP and Servlet
+- JDBC API to access a database
+- [MySQL Community Server](https://dev.mysql.com/downloads/mysql/) as relational database management system
+- [Apache Tomcat](http://tomcat.apache.org/) as Java Servlet/JSP Container 
+- IDE used in project is [IntelliJ IDEA 15](https://www.jetbrains.com/idea/)
+ 
+## Installation:
+ 
+To get the project you can simply use this HTTPS-link:  
+https://github.com/quar17esma/Guest-Book.git 
 
-If you want to skip the creation steps you can clone the finished sample and then skip to the 'Deploy Your Application to Heroku' section:
+## Disclaimer:
 
-```
-$ git clone git@github.com:heroku/devcenter-embedded-tomcat.git
-```
-
-## Follow the Guide
-
-If you would like to create the application yourself, then follow the Dev Center guide on how to [Create a Java Web Application using Embedded Tomcat](https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat).
-
-
+This project is intended for non-commercial educational purposes.
